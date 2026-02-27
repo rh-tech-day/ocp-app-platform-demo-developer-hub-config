@@ -56,7 +56,11 @@ data:
     catalog:
       rules:
         - allow: [Component, System, API, Resource, Location, Template, Domain]
-      locations: []
+      locations:
+        - type: url
+          target: https://github.com/evanshortiss/from-ai-hype-to-platform-reality/blob/main/catalog/catalog-info.yaml
+          rules:
+            - allow: [Component, System, API, Resource, Location, Template, Domain, User, Group]
       providers:
         keycloakOrg:
           default:
