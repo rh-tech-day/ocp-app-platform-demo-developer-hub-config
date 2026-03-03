@@ -39,11 +39,9 @@ spec:
             containers:
               - env:
                   - name: VALIDATION_PROVIDER
-                    # value: vllm
-                    value: ""
+                    value: vllm
                   - name: VALIDATION_MODEL_NAME
-                    # value: qwen3-14b
-                    value: ""
+                    value: qwen3-14b
                 envFrom:
                   - secretRef:
                       name: llama-stack-secrets
