@@ -38,10 +38,8 @@ data:
         disabled: false
       - package: ./dynamic-plugins/dist/backstage-plugin-catalog-backend-module-gitlab-dynamic
         disabled: false
-      - package: ./dynamic-plugins/dist/red-hat-developer-hub-backstage-plugin-lightspeed-backend-dynamic
-        disabled: false
-      - package: ./dynamic-plugins/dist/red-hat-developer-hub-backstage-plugin-lightspeed
-        disabled: false
+      - disabled: false
+        package: oci://ghcr.io/redhat-developer/rhdh-plugin-export-overlays/red-hat-developer-hub-backstage-plugin-lightspeed:bs_1.42.5__1.0.3!red-hat-developer-hub-backstage-plugin-lightspeed
         pluginConfig:
           dynamicPlugins:
             frontend:
@@ -51,9 +49,15 @@ data:
                     module: LightspeedPlugin
                     importName: LightspeedIcon
                 dynamicRoutes:
-                  - path: /lightspeed
-                    importName: LightspeedPage
-                    module: LightspeedPlugin
+                  - importName: LightspeedPage
                     menuItem:
                       icon: LightspeedIcon
                       text: Lightspeed
+                    module: LightspeedPlugin
+                    path: /lightspeed
+                translationResources:
+                  - importName: lightspeedTranslations
+                    module: Alpha
+                    ref: lightspeedTranslationRef
+      - disabled: false
+        package: oci://ghcr.io/redhat-developer/rhdh-plugin-export-overlays/red-hat-developer-hub-backstage-plugin-lightspeed-backend:bs_1.42.5__1.0.3!red-hat-developer-hub-backstage-plugin-lightspeed-backend
