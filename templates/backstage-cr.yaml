@@ -15,10 +15,12 @@ spec:
         - name: app-config-rhdh
     dynamicPluginsConfigMapName: dynamic-plugins
     extraEnvs:
-      # TODO: Verify if this is needed
-      # envs:
-      #   - name: NODE_TLS_REJECT_UNAUTHORIZED
-      #     value: "0"
+      # Seems to be needed for the kubernetes api interaction
+      # since RHPDS cluster is using self-signed certificates
+      # for the api server
+      envs:
+        - name: NODE_TLS_REJECT_UNAUTHORIZED
+          value: "0"
       secrets:
         - name: gitlab-token
         - name: argocd-password
