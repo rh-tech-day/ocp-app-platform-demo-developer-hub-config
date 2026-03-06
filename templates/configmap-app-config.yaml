@@ -64,17 +64,17 @@ data:
       # Lightspeed-specific CSP and script-src/img-src directives
       csp:
         upgrade-insecure-requests: false
-      img-src:
-        - "'self'"
-        - "data:"
-        - https://img.freepik.com
-        - https://cdn.dribbble.com
-        - https://avatars.githubusercontent.com
-        - https://api.dicebear.com
-      script-src:
-        - "'self'"
-        - "'unsafe-eval'"
-        - https://cdn.jsdelivr.net
+        img-src:
+          - "'self'"
+          - "data:"
+          - https://img.freepik.com
+          - https://cdn.dribbble.com
+          - https://avatars.githubusercontent.com
+          - https://api.dicebear.com
+        script-src:
+          - "'self'"
+          - "'unsafe-eval'"
+          - https://cdn.jsdelivr.net
 
 
     integrations:
