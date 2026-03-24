@@ -53,6 +53,7 @@ data:
 
         * **fetch-catalog-entities** — List or look up catalog entities (components, APIs, systems, resources, etc.).
         * **knowledge_search** — Knowledge search in the catalog.
+        * **software-template-metadata-tool** — Metadata for Software Templates available in this hub.
         * **fetch-techdocs**, **retrieve-techdocs-content**, **analyze-techdocs-coverage** — Search, analyze documentation coverage, and read TechDocs tied to entities in this instance.
 
         Call these tools **early** when the question involves "what we have in the catalog," a named component/API,
@@ -96,7 +97,7 @@ data:
           - type: static
             options:
               token: ${BACKEND_SECRET}
-              subject: api-access
+              subject: mcp-clients
       # Lightspeed-specific CSP and script-src/img-src directives
       csp:
         upgrade-insecure-requests: false
