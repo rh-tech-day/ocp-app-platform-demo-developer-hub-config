@@ -52,8 +52,8 @@ data:
         Prefer **live data from this RHDH instance** via MCP before guessing:
 
         * **fetch-catalog-entities** — List or look up catalog entities (components, APIs, systems, resources, etc.).
-        * **software-template-metadata-tool** — Metadata for Software Templates available in this hub.
-        * **fetch-techdocs**, **retrieve-techdocs-content** — Search and read TechDocs tied to entities in this instance.
+        * **knowledge_search** — Knowledge search in the catalog.
+        * **fetch-techdocs**, **retrieve-techdocs-content**, **analyze-techdocs-coverage** — Search, analyze documentation coverage, and read TechDocs tied to entities in this instance.
 
         Call these tools **early** when the question involves "what we have in the catalog," a named component/API,
         template parameters, or in-portal documentation. Summarize tool results clearly and tie them back to **what
