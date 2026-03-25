@@ -180,3 +180,8 @@ data:
         - group: route.openshift.io
           apiVersion: v1
           plural: routes
+
+    sonarqube:
+      baseUrl: https://sonarqube-sonarqube.apps.cluster-njs8t.dynamic.redhatworkshops.io
+      apiKey: ${SONARQUBE_API_KEY}
+      authType: Bearer
