@@ -71,6 +71,12 @@ data:
     auth:
       session:
         secret: ${BACKEND_SECRET}
+      autologout:
+        enabled: true
+        idleTimeoutMinutes: 15
+        promptBeforeIdleSeconds: 30
+        useWorkerTimers: false
+        logoutIfDisconnected: true        
       environment: production
       providers:
         oidc:
@@ -82,7 +88,7 @@ data:
             signIn:
               resolvers:
                 - resolver: preferredUsernameMatchingUserEntityName
-    
+
     backend:
       baseUrl: https://{{ .Values.backstage.host }}
       listen:
