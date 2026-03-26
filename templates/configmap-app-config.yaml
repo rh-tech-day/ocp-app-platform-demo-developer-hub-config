@@ -166,6 +166,9 @@ data:
               password: ${ARGOCD_PASSWORD}
 
     kubernetes:
+      frontend:
+        podDelete:
+          enabled: true
       serviceLocatorMethod:
         type: multiTenant
       clusterLocatorMethods:
