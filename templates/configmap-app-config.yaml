@@ -191,6 +191,6 @@ data:
           plural: routes
 
     sonarqube:
-      baseUrl: https://sonarqube-sonarqube.apps.cluster-mkfzg.dynamic.redhatworkshops.io
+      baseUrl: https://{{ .Values.sonarqube.host }}
       apiKey: ${SONARQUBE_API_KEY}
       authType: Bearer
